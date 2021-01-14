@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 
 export default class extends Component {
+    
+    onFocus = () => console.log("Good!")
+    onBlur = () => console.log("Hey! Eyes on me!")
+
     render() {
         return (
             <div>
-                <button onFocus={() => console.log("Good!")} onBlur={() => console.log("Hey! Eyes on me!")} ></button>
+                <button onFocus={this.onFocus} onBlur={this.onBlur} ></button>
             </div>
         )
     }
